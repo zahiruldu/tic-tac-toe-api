@@ -4,16 +4,14 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const UserSchema = new Schema({
-  email: {
+const GameSchema = new Schema({
+  sessionId: {
     type: String,
     unique:true,
     index: true
   },
-  name: {
-    type: String,
-    index: true
-  },
+  board: [{type: String}],
+  status: {type: String, default: 'playing'},
   createdDate: {
     type: Date,
     default: Date.now
@@ -24,5 +22,5 @@ const UserSchema = new Schema({
   }
 });
 
-const Model = mongoose.model('User', UserSchema);
+const Model = mongoose.model('Game', GameSchema);
 module.exports = Model;
