@@ -42,7 +42,16 @@ config/config.js
 npm test
 ```
 * Deployment instructions
+Build docker
+```
+docker build -t <your username>/tictactoeapi .
+```
+Run image
+```
+docker run -p 8080:8080 <your username>/tictactoeapi 
+```
 
+Now you can browse the url `http://localhost:8080`
 
 
 ### Who do I talk to? ###

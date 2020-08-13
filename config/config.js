@@ -1,7 +1,7 @@
 module.exports = {
   //MongoDB configuration
   development: {
-    db: 'mongodb://127.0.0.1/tictactoe',
+    db: 'mongodb://tictac:TicUser123456@ds011495.mlab.com:11495/tictactoe',
     app: {
       name: 'tictactoe'
     }
