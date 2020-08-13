@@ -1,5 +1,6 @@
 
 const Game =  require('../models/game.model');
+const Winner =  require('../../utils/winner');
 
 exports.allGames = async (req, res) => {
 
@@ -70,6 +71,17 @@ exports.updateGame = (req, res) => {
         let newBoard = gameInfo.board;
         newBoard.splice(position, 1, player);
         gameInfo.board = newBoard;
+        gameInfo.lastPlayer = player;
+
+        // check if winner
+        const isWinner = Winner.isWinner(newBoard, player);
+        if(isWinner) {
+          // save the  winning
+          gameInfo.winner = player;
+          gameInfo.status = 'won';
+
+        }
+
         gameInfo.save((error, result)=>{
           if(error){
             res.status(403).send({

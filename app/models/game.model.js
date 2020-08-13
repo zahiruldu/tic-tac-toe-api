@@ -12,6 +12,8 @@ const GameSchema = new Schema({
   },
   board: [{type: String}],
   status: {type: String, default: 'playing'},
+  winner: {type: String},
+  lastPlayer: {type: String},
   createdDate: {
     type: Date,
     default: Date.now
