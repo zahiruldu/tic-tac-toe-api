@@ -1,4 +1,4 @@
-# README #
+# Tic-Tac-Toe API #
 
 Tic Tac Toe Api Backend.
 
