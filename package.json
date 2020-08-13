@@ -4,9 +4,9 @@
   "description": "Sample node boilerplate",
   "main": "server.js",
   "scripts": {
-    "start": "start",
+    "start": "node server.js",
     "start:dev": "DEBUG=* node server.js",
-    "prestart": "./node_modules/jshint/bin/jshint app && ./node_modules/jshint/bin/jshint config",
+    "lint": "./node_modules/jshint/bin/jshint app && ./node_modules/jshint/bin/jshint config",
     "test": "mocha"
   },
   "repository": {

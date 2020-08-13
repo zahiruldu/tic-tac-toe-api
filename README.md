@@ -1,10 +1,10 @@
 # README #
 
-Node Api Backend.
+Tic Tac Toe Api Backend.
 
 ### What is this repository for? ###
 
-This application contains about the backend api functionalities of a sample node application.
+This application contains the backend api functionalities of a Tic Tac Toe React application.
 
 
 ### Installation? ###
@@ -12,8 +12,8 @@ To run the Api application follow the following steps. Be sure you are using Nod
 
 * Configuration
 ```
-git clone git@github.com:zahiruldu/node-boilerplate.git
-cd node-boilerplate
+git clone https://github.com/zahiruldu/tic-tac-toe-api.git tictacapi
+cd tictacapi
 npm install
 npm start
 ```
