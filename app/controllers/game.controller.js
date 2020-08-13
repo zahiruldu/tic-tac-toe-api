@@ -136,4 +136,9 @@ exports.deleteGame = (req, res) => {
   }
 };
 
+exports.allGamesDelete = async (req, res)=>{
+  const result = await Game.deleteMany({}).exec();
+  res.send(result);
+};
+
 module.exports = exports;
